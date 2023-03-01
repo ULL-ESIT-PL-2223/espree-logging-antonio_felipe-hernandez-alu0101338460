@@ -19,8 +19,10 @@ function removeSpaces(s) {
   return s.replace(/\s/g, '');
 }
 
-for (let i = 0; i < Test.length; i++) {
-  // Write your tests here   
-}
-
+describe(`Probando la el console.log en funciones incluyendo las de flecha gorda con su nombre, parámetros y número de línea`, () => {
+  for (let i = 0; i < Test.length; i++) {
+    it(`Test(${Tst[i].input}, ${Tst[i].output})`, async () => {
+    });
+  }
+});
 
