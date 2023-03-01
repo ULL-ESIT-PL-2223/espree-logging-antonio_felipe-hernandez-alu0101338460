@@ -75,6 +75,9 @@ Consideré que un test era suficiente para comprobar todas las funcionalidades:
 ## Se ha intentado publicar el paquete npm
 
 Se ha pasado por muchos problemas para crear la cuenta de npm e introducir los comandos, pero no he conseguido publicar el paquete porque el scope no existe
+
 ![cuenta](./img/cuenta.png)
+
 ![npmpublish](./img/npmpublish.png)
+
 ![npmscope](./img/npmscope.png)
