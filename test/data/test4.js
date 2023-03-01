@@ -1,7 +1,6 @@
-function foo(a, b, c) {
-  let x = 'tutu';
-  let y = (function (x) { return x*x })(2);
-  let z = (e => { return e +1 })(4);
-  console.log(x,y,z);
-}
-foo(1, 'wut', 3);
+// Arrow function que devuelve el cuadrado de un número
+const square = (num) => {
+  return num * num;
+};
+// Llamando a la función con el argumento 5
+console.log(square(5)); // Output: 25

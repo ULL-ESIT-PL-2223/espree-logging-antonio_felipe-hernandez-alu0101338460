@@ -40,8 +40,10 @@ function addBeforeCode(node) {
       parmNames = "${" + node.params.map(param => param.name).join("}, ${") + "}";
   }
   const lineN = node.loc.start.line;
-  const beforeCode = "console.log('Entering " + name + "(" + parmNames + ")" + " at line " + lineN + "');";
-  const beforeNodes = espree.parse(beforeCode).body;
+  const beforeCode = "console.log(" + "`" + "Entering " + name + "(" + parmNames + ")" + " at line " + lineN + "`" + ");";
+  const beforeNodes = espree.parse(beforeCode, {ecmaVersion: espree.latestEcmaVersion}).body;
   node.body.body = beforeNodes.concat(node.body.body);
 }
+
+
 

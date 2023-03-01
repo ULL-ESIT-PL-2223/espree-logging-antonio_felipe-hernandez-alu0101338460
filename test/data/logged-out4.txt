@@ -1,4 +1,2 @@
-Entering foo(a, b, c) at line 1
-Entering <anonymous function>(x) at line 3
-Entering <anonymous function>(e) at line 4
-tutu 4 5
+Entering <anonymous function>(`${num}`) at line 2
+25

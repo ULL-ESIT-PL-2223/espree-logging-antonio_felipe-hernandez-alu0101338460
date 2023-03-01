@@ -4,6 +4,7 @@
 ## Resumen de lo aprendido sobre logging-espree.js
 
 El archivo logging.js utiliza la librería Espree para analizar el código fuente de un archivo de entrada. El código de entrada se analiza para identificar todas las funciones declaradas y expresiones de función flecha. Una vez que se identifican estas funciones, se agrega un __console.log__ a cada función antes de su cuerpo de función. Este se genera utilizando la información de la función, como su nombre, parámetros y número de línea. El código de registro es un mensaje de que se muestra en la consola, que indica que se ha ingresado en una función específica del archivo de entrada
+El depurador de google permite establecer breakpoints y controlar el flujo de ejecución de un programa así como las características que suelen tener los depuradores. Se abre con f12.
 
 ## Indicar los valores de los argumentos
 
@@ -38,6 +39,10 @@ El ejecutable `bin/log.js` se ha modificado para que acepte argumentos de línea
 
 ![commander](./img/commander.png)
 
+## Se han añadido scripts
+
+![scripts](./img/scripts.png)
+
 ## Reto 1: Soportar funciones flecha
 
 Para esto, se ha modificado el código y se ha usado una versión ecmaVersion que soporte las funciones flecha. En este caso, se ha usado la versión 12:
@@ -60,4 +65,16 @@ Para ejecutar los tests y comprobar la cobertura, se ha usado el siguiente coman
 
 ```bash
 npm run test
+npm run cov
 ```
+
+Consideré que un test era suficiente para comprobar todas las funcionalidades:
+
+![tests](./img/tests.png)
+
+## Se ha intentado publicar el paquete npm
+
+Se ha pasado por muchos problemas para crear la cuenta de npm e introducir los comandos, pero no he conseguido publicar el paquete porque el scope no existe
+![cuenta](./img/cuenta.png)
+![npmpublish](./img/npmpublish.png)
+![npmscope](./img/npmscope.png)
