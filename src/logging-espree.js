@@ -14,6 +14,11 @@ export async function transpile(inputFile, outputFile) {
   await fs.writeFile(outputFile, output)
 }
 
+/**
+ * @desc Añade el codigo de logging a la función, este caso añade un __console.log__ antes de la función
+ *       con el nombre de la misma, sus parametros y el nº de línea
+ * @param {*} code código con funciones
+ */
 export function addLogging(code) {
   const ast = espree.parse(code, { ecmaVersion: 12, loc: true }); // loc para que nos de la linea y ecmaversion para las arrow functions
   estraverse.traverse(ast, {
@@ -32,7 +37,7 @@ function addBeforeCode(node) {
   const name = node.id ? node.id.name : '<anonymous function>';
   let parmNames = "";
   if (node.params.length) {
-      parmNames = node.params.map(param => param.name).join(", ");
+      parmNames = "${" + node.params.map(param => param.name).join("}, ${") + "}";
   }
   const lineN = node.loc.start.line;
   const beforeCode = "console.log('Entering " + name + "(" + parmNames + ")" + " at line " + lineN + "');";
